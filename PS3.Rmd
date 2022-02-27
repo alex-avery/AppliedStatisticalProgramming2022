@@ -1,5 +1,6 @@
 ---
 title: "Applied Statistical Programming - Spring 2022"
+author: "Alex Avery"
 output: pdf_document
 ---
 
@@ -44,5 +45,18 @@ For this problem set, you will not solve the Monty Hall Problem, but you will ha
 \end{enumerate}
 
 ```{r tidy=TRUE}
-# Code
+#I am first creating the function that allows the player to choose a door. 
+choose_door <- function(x){
+  if (x != 1 & x != 2 & x != 3){
+    stop("Selected door must be 1, 2, or 3.") #There are only three doors, so the if statement stops the function if the player chooses a door outside of 1 through 3. 
+  }
+  selected_door <- x #saving the door chosen by the player into "selected_door"
+  class(selected_door) <- "door" #assigning the selected door as the "door" class
+  return(selected_door) #returning selected door 
+}
+
+#testing choose_door function
+choose_door(2) 
+choose_door(4)
+
 ```
