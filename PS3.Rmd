@@ -45,6 +45,8 @@ For this problem set, you will not solve the Monty Hall Problem, but you will ha
 \end{enumerate}
 
 ```{r tidy=TRUE}
+##CONSTRUCTOR FUNCTION##
+
 #I am first creating the function that allows the player to choose a door. 
 choose_door <- function(x){
   if (x != 1 & x != 2 & x != 3){
@@ -60,6 +62,19 @@ choose_door(2)
 choose_door(4)
 
 ```
+```{r}
+##VALIDATOR FUNCTION##
+
+validate_door <- function(door){
+  if(is.integer(door) == "FALSE"){
+    stop("Please use choose_door function to select a door")
+  }
+  if(class(door) != door){
+    stop("Please use choose_door function to select a door")
+  }
+}
+```
+
 
 ```{r}
 #creating a generic method for the function "play_game" 
@@ -69,8 +84,8 @@ play_game <- function(x){
 
 
 play_game.door <- function(door){
+   door <- validate_door(door) #Here we validate the input 
   car_door <- sample(1:3, 1) #The winning door is selected from a random sample of doors 1 through 3. 
-  
   if(door == car_door){
     print("Congrats! You won a car!")
   }
