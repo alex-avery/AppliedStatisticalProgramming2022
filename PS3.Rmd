@@ -57,7 +57,7 @@ choose_door <- function(x){
   return(selected_door) #returning selected door 
 }
 
-#testing choose_door function
+#let's test our constructor function:
 choose_door(2) 
 choose_door(4)
 
@@ -66,12 +66,15 @@ choose_door(4)
 ##VALIDATOR FUNCTION##
 
 validate_door <- function(door){
-  if(is.integer(door) == "TRUE" & class(door) == "door"){
+  if(is.integer(door) == "TRUE" & class(door) == "door") #the input must be a integer and also of the class "door"
+    {
     return(door)
   } else{
     stop("Please use choose_door function to select a door")
   }
 }
+
+#This validator function will be fed into our play game function. 
 ```
 
 
@@ -81,11 +84,12 @@ play_game <- function(x){
   UseMethod("play_game")
 }
 
-
+#creating our "play_game" function for the class "door". 
 play_game.door <- function(door){
-   door <- validate_door(door) #Here we validate the input 
+   door <- validate_door(door) #Here we validate the input using our validator function we created earlier
   car_door <- sample(1:3, 1) #The winning door is selected from a random sample of doors 1 through 3. 
-  if(door == car_door){
+  if(door == car_door) #here we compare the value of the input door with the car door sample. 
+    {
     print("Congrats! You won a car!")
   }
   else{
@@ -94,5 +98,14 @@ play_game.door <- function(door){
   
 }
 
+```
+
+```{r}
+##TEST##
+
+#let's test our game!
+
+Alex_door <- choose_door(3)
+play_game(Alex_door)
 ```
 
