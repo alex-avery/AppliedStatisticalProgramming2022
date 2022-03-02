@@ -52,7 +52,7 @@ choose_door <- function(x){
   if (x != 1 & x != 2 & x != 3){
     stop("Selected door must be 1, 2, or 3.") #There are only three doors, so the if statement stops the function if the player chooses a door outside of 1 through 3. 
   }
-  selected_door <- x #saving the door chosen by the player into "selected_door"
+  selected_door <- as.integer(x) #saving the door chosen by the player into "selected_door" as an integer
   class(selected_door) <- "door" #assigning the selected door as the "door" class
   return(selected_door) #returning selected door 
 }
@@ -66,10 +66,9 @@ choose_door(4)
 ##VALIDATOR FUNCTION##
 
 validate_door <- function(door){
-  if(is.integer(door) == "FALSE"){
-    stop("Please use choose_door function to select a door")
-  }
-  if(class(door) != door){
+  if(is.integer(door) == "TRUE" & class(door) == "door"){
+    return(door)
+  } else{
     stop("Please use choose_door function to select a door")
   }
 }
