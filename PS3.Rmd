@@ -66,5 +66,19 @@ choose_door(4)
 play_game <- function(x){
   UseMethod("play_game")
 }
+
+
+play_game.door <- function(door){
+  car_door <- sample(1:3, 1) #The winning door is selected from a random sample of doors 1 through 3. 
+  
+  if(door == car_door){
+    print("Congrats! You won a car!")
+  }
+  else{
+    print("Wrong Answer! Better luck next time!")
+  }
+  
+}
+
 ```
 
