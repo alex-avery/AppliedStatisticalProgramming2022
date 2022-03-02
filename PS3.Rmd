@@ -60,3 +60,11 @@ choose_door(2)
 choose_door(4)
 
 ```
+
+```{r}
+#creating a generic method for the function "play_game" 
+play_game <- function(x){
+  UseMethod("play_game")
+}
+```
+
