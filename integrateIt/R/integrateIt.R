@@ -10,10 +10,10 @@ setGeneric(
 setMethod(
   "integrateIt",
   def = function(fun, x, a, b, n, rule){
-    #create interval for integration
-    interval <- seq(from = a, to = b, length.out = n)
-    #get y vector
-    y <- fun(x)
+    #get x_values vector
+    x_values <- x[x >= a & x <= b]
+    #get y_values vector
+    y_values <- sapply(x_values, fun)
     #create h
     h <- (b - a) / n
     if(rule == "Trapezoid" | rule == "trapezoid"){
@@ -30,4 +30,7 @@ setMethod(
     }
   }
 )
+
+
+test <- integrateIt(fun = (x^2), x = (1:80), a = 1, b = 80, n = 40, rule = "Trapezoid")
 
