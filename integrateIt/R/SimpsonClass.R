@@ -1,47 +1,44 @@
-#' Simpson Class
+#' Simpson Rule
 #'
-#' @slot x a vector of numeric values.
-#' @slot y a vector of numeric values..
-#' @slot a a numeric value contained in x (start of integration).
-#' @slot b a numeric value contained in x (end of integration).
-#' @slot n a numeric value the length of vector x.
+#' A technique for approximating the definite integral.
 #'
+#' @slot fun function defined by the user.
+#' @slot x vector of numeric values.
+#' @slot y vector of numeric values.
+#' @slot result integer value.
 #'
 #' @export
+#'
 setClass(
   Class = "Simpson",
   representation = representation(
     fun = "function",
     x = "numeric",
     y = "numeric",
-    a = "numeric",
-    b = "numeric",
-    n = "numeric"
+    result = "numeric"
   ),
   prototype = prototype(
     x = NA_real_,
     y = NA_real_,
-    a = NA_real_,
-    b = NA_real_,
-    n = NA_real_
+    result = NA_real_
   )
 )
 
 setValidity(
   "Simpson",
   function(object){
-    #test that x and y are the same length
-    test_xy_length <- length(object@x) == length(object@y)
-    #test that n is equal to the length of vector x
-    test_n_length <- n == length(object@x)
-    #test that a and b are in vector x
-    test_ab <- (object@a %in% object@x) & (object@b %in% object@x)
-    if(!test_xy_length){
-      stop("The vectors x and y are not of the same length.")}
-    if(!test_n_length){
-      stop("n is not the correct length.")}
-    if(!test_ab){
-      stop("a and/or b is not contained in x.")
+    #test that x has no NA values
+    test_x_na <- any(is.na(object@x))
+    #test that y has no NA values
+    test_y_na <- any(is.na(object@y))
+    #test that result is an integer
+    test_result <- length(object@result) != 1
+    if(test_x_na){
+      stop("There are NA values in the vector x.")}
+    if(test_y_na){
+      stop("There are NA values in the vector y.")}
+    if(test_result){
+      stop("Results must be an integer value.")
     }
   }
 )
