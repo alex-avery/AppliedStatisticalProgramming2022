@@ -10,6 +10,7 @@
 setClass(
   Class = "Trapezoid",
   representation = representation(
+    fun = "function",
     x = "numeric",
     y = "numeric",
     a = "numeric",
