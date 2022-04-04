@@ -1,3 +1,13 @@
+#' Simpson Class
+#'
+#' @slot x a vector of numeric values.
+#' @slot y a vector of numeric values..
+#' @slot a a numeric value contained in x (start of integration).
+#' @slot b a numeric value contained in x (end of integration).
+#' @slot n a numeric value the length of vector x.
+#'
+#'
+#' @export
 setClass(
   Class = "Simpson",
   representation = representation(
@@ -35,6 +45,7 @@ setValidity(
   }
 )
 
+#' @export
 setMethod(
   "initialize",
   "Simpson",
