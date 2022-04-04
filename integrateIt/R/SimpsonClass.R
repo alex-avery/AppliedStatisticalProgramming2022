@@ -53,3 +53,12 @@ setMethod(
     return(value)
   }
 )
+
+#' @export
+setMethod(
+  "print",
+  x = "Simpson",
+  function(x){
+    print(x@result)
+  }
+)

@@ -53,3 +53,13 @@ setMethod(
     return(value)
   }
 )
+
+#' @export
+setMethod(
+  "print",
+  x = "Trapezoid",
+  function(x){
+    print(x@result)
+  }
+)
+
