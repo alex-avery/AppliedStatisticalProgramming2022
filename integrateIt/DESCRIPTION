@@ -1,10 +1,9 @@
 Package: integrateIt
-Title: What the Package Does (One Line, Title Case)
+Title: Integrates Functions
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Alex", "Avery", "a.d.avery@wustl.edu")
+Description: integrateIt package integrates functions using the Trapezodial rule or the Simpson rule. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
