@@ -2,7 +2,7 @@
 
 setGeneric(
   name = "integrateIt",
-  def = function(x, y, a, b, n, rule){
+  def = function(fun, a, b, n, rule){
              standardGeneric("integrateIt")
            }
   )
