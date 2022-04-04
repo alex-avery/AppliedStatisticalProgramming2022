@@ -57,7 +57,7 @@ setMethod(
 #' @export
 setMethod(
   "print",
-  x = "Trapezoid",
+  (x = "Trapezoid"),
   function(x){
     print(x@result)
   }

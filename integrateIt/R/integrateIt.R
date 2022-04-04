@@ -1,5 +1,15 @@
-#integrateIt
-
+#' Integration Techniques
+#'
+#' Integrate functions using Trapezoidal Rule or Simpson Rule.
+#'
+#' @param fun A function defined by the user.
+#' @param x A vector of numeric values
+#' @param a lower bound of integration
+#' @param b upper bound of integration
+#' @param rule specified Trapezodial or Simpson rule
+#'
+#'
+#' @export
 setGeneric(
   name = "integrateIt",
   def = function(fun, x, a, b, rule){
@@ -7,6 +17,7 @@ setGeneric(
            }
   )
 
+#' @export
 setMethod(
   "integrateIt",
   def = function(fun, x, a, b, rule){

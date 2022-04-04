@@ -57,7 +57,7 @@ setMethod(
 #' @export
 setMethod(
   "print",
-  x = "Simpson",
+  (x = "Simpson"),
   function(x){
     print(x@result)
   }
