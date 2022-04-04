@@ -34,3 +34,13 @@ setValidity(
     }
   }
 )
+
+setMethod(
+  "initialize",
+  "Simpson",
+  function(.Object, ...){
+    value = callNextMethod()
+    validObject(value)
+    return(value)
+  }
+)
