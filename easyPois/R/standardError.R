@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param y
+#' @param SEtype
+#' @param B
+#'
+#' @return
+#' @export
+#'
+#' @examples
 standardError <- function(y, SEtype, B){
   #get n
   n <- length(y)

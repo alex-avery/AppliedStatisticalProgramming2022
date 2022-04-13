@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param y
+#' @param SEtype
+#' @param B
+#'
+#' @return
+#' @export
+#'
+#' @examples
 setGeneric(
   name = "estimatePois",
   def = function(y, SEtype, B){

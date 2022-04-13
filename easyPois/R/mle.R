@@ -1,3 +1,11 @@
+#' Title
+#'
+#' @param y
+#'
+#' @return
+#' @export
+#'
+#' @examples
 mle <- function(y){
   numerator <- sum(y)
   denominator <- length(y)

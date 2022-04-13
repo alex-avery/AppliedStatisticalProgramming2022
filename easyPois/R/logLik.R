@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param y
+#' @param lambda
+#'
+#' @return
+#' @export
+#'
+#' @examples
 logLik <- function(y, lambda){
   #getting the number of observations
   n <- length(y)

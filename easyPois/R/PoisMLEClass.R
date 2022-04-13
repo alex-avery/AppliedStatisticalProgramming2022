@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @slot y numeric.
+#' @slot MLE numeric.
+#' @slot LL numeric.
+#' @slot SE numeric.
+#' @slot SEtype character.
+#'
+#' @return
+#' @export
+#'
+#' @examples
 setClass(
   Class = PoisMLE,
   representation = representation(
