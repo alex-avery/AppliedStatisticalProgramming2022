@@ -21,7 +21,7 @@ Calculates the standard error for a Poisson Model using basic or bootstrap stand
 }
 \examples{
 y <- (1:10)
-basic <- standardError(y = y, SEtype = basic, B = 0)
-bootstrap <- standardError(y = y, SEtype = bootstrap, B = 10)
+basic <- standardError(y = y, SEtype = "basic", B = 0)
+bootstrap <- standardError(y = y, SEtype = "bootstrap", B = 10)
 
 }

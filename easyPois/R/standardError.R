@@ -10,8 +10,8 @@
 #'
 #' @examples
 #' y <- (1:10)
-#' basic <- standardError(y = y, SEtype = basic, B = 0)
-#' bootstrap <- standardError(y = y, SEtype = bootstrap, B = 10)
+#' basic <- standardError(y = y, SEtype = "basic", B = 0)
+#' bootstrap <- standardError(y = y, SEtype = "bootstrap", B = 10)
 #'
 #' @export
 standardError <- function(y, SEtype, B){
