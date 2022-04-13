@@ -20,7 +20,7 @@ standardError <- function(y, SEtype, B){
   if(SEtype == "basic"){
     SE <- sqrt(mle(y) / n)
   }
-  if(SEtyoe == "bootstrap"){
+  if(SEtype == "bootstrap"){
     #create matrix of samples
     samples <- matrix(unlist(lapply(c(1:B), FUN = sample(y, n, replace = TRUE))), nrow = n, ncol = B)
     #calculate MLE for each sample
