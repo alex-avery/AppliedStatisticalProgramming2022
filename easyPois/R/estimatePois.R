@@ -12,8 +12,8 @@
 #'
 #' @examples
 #' y <- (1:10)
-#' example1 <- estimatePois(y = y, SEtype = basic, B = 0)
-#' example2 <- estimatePois(y = y, SEtype = bootstrap, B = 10)
+#' example1 <- estimatePois(y = y, SEtype = "basic", B = 0)
+#' example2 <- estimatePois(y = y, SEtype = "bootstrap", B = 10)
 #'
 #' @export
 setGeneric(
