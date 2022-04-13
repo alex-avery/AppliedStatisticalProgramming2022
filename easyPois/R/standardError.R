@@ -29,8 +29,5 @@ standardError <- function(y, SEtype, B){
     mleSD <- sd(mleSamples)
     SE <- mleSD
   }
-  else{
-    stop("Invalid SEtype argument. Please use basic or bootstrap.")
-  }
   return(SE)
 }
