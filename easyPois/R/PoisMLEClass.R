@@ -1,10 +1,12 @@
-#' Title
+#' Poisson MLE Class
 #'
-#' @slot y numeric.
-#' @slot MLE numeric.
-#' @slot LL numeric.
-#' @slot SE numeric.
-#' @slot SEtype character.
+#' An S4 class for a Possion Model
+#'
+#' @slot y a vector of positive values
+#' @slot MLE The maximum likelihood estimator for the y vector.
+#' @slot LL The log likelihood calculated from the y vector.
+#' @slot SE The standard error for the MLE
+#' @slot SEtype The method used to calculate the standard error (either basic or bootstrap).
 #'
 #' @return
 #' @export
@@ -51,3 +53,7 @@ setMethod("initialize", "PoisMLE",
             return(value)
           }
 )
+
+
+
+
