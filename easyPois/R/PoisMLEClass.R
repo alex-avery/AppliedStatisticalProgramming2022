@@ -11,7 +11,7 @@
 #'
 #' @examples
 setClass(
-  Class = PoisMLE,
+  Class = "PoisMLE",
   representation = representation(
     y = "numeric",
     MLE = "numeric",
@@ -42,6 +42,8 @@ setValidity("PoisMLE", function(object){
 }
 )
 
+#' @rdname PoisMLE
+#' @export
 setMethod("initialize", "PoisMLE",
           function(.Object, ...){
             value = callNextMethod()
