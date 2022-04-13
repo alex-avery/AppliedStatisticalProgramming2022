@@ -1,11 +1,16 @@
-#' Title
+#' Maximum Likelihood Estimate
 #'
-#' @param y
+#' Calculates the maximum likelihood estimate for a Possion Model
 #'
-#' @return
+#' @param y a vector of positive values
+#'
+#' @return maximum likelihood estimate
+#'
+#' @example
+#' y <- (1:10)
+#' y_mle <- mle(y)
+#'
 #' @export
-#'
-#' @examples
 mle <- function(y){
   numerator <- sum(y)
   denominator <- length(y)
