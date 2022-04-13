@@ -51,8 +51,8 @@ setValidity("PoisMLE", function(object){
 #' @export
 setMethod("initialize", "PoisMLE",
           function(.Object, ...){
-            value = callNextMethod()
-            validObject(value)
+            value = methods::callNextMethod()
+            methods::validObject(value)
             return(value)
           }
 )

@@ -26,7 +26,7 @@ standardError <- function(y, SEtype, B){
     #calculate MLE for each sample
     mleSamples <- apply(samples, MARGIN = 2, FUN = mle)
     #find standard deviation
-    mleSD <- sd(mleSamples)
+    mleSD <- stats::sd(mleSamples)
     SE <- mleSD
   }
   return(SE)

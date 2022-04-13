@@ -2,10 +2,11 @@ Package: easyPois
 Title: Easy Way to Estimate Values for Poisson Model
 Version: 0.0.0.9000
 Authors@R: 
-    person("Alex", "Avery", "a.d.avery@wustl.edu")
+    person("Alex", "Avery", , "a.d.avery@wustl.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: This package takes a vector of positive values and estimates values related to the Poisson Model to find lambda. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports: methods
+Imports: methods, stats

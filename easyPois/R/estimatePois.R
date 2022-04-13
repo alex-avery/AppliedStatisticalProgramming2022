@@ -26,7 +26,7 @@ setGeneric(
 setMethod(
   "estimatePois",
   def = function(y, SEtype, B){
-    return(new("PoisMLE",
+    return(methods::new("PoisMLE",
                 y = y,
                 MLE = mle(y),
                 LL = logLik(y, mle(y)),
