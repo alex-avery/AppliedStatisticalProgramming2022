@@ -16,3 +16,24 @@ setClass(
 
   )
 )
+
+setValidity("PoisMLE", function(object){
+  if(any(y < 0)){
+    stop("All y values must be greater than or equal to zero.")
+  }
+  if(object@MLE != mle(object@y)){
+    stop("Invalid MLE")
+  }
+  if(object@LL != logLik(object@y, object@MLE)){
+    stop("Invalid LL")
+  }
+}
+)
+
+setMethod("initialize", "PoisMLE",
+          function(.Object, ...){
+            value = callNextMethod()
+            validObject(value)
+            return(value)
+          }
+)
