@@ -22,7 +22,7 @@ standardError <- function(y, SEtype, B){
   }
   if(SEtype == "bootstrap"){
     #create matrix of samples
-    samples <- matrix(unlist(lapply(c(1:B), FUN = sample(y, n, replace = TRUE))), nrow = n, ncol = B)
+    samples <- matrix(unlist(lapply(c(1:B), function(x){sample(y, n, replace = TRUE)})), nrow = n, ncol = B)
     #calculate MLE for each sample
     mleSamples <- apply(samples, MARGIN = 2, FUN = mle)
     #find standard deviation

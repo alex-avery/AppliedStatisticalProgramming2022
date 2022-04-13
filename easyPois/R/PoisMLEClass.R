@@ -41,7 +41,7 @@ setValidity("PoisMLE", function(object){
   if(object@LL != logLik(object@y, object@MLE)){
     stop("Invalid LL")
   }
-  if(!(SEtype == "basic" | SEtype == "bootstrap")){
+  if(!(object@SEtype == "basic" | object@SEtype == "bootstrap")){
     stop("Invalid standard error type. Please use basic or bootstrap")
   }
 }
