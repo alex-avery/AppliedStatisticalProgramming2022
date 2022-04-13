@@ -11,7 +11,7 @@
 #' @seealso PoisMLEClass
 #'
 #' @examples
-#' y <- c(1:10)
+#' y <- (1:10)
 #' example1 <- estimatePois(y = y, SEtype = basic, B = 0)
 #' example2 <- estimatePois(y = y, SEtype = bootstrap, B = 10)
 #'
