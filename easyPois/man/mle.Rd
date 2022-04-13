@@ -2,16 +2,16 @@
 % Please edit documentation in R/mle.R
 \name{mle}
 \alias{mle}
-\title{Title}
+\title{Maximum Likelihood Estimate}
 \usage{
 mle(y)
 }
 \arguments{
-\item{y}{}
+\item{y}{a vector of positive values}
 }
 \value{
-
+maximum likelihood estimate
 }
 \description{
-Title
+Calculates the maximum likelihood estimate for a Possion Model
 }

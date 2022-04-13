@@ -2,16 +2,26 @@
 % Please edit documentation in R/standardError.R
 \name{standardError}
 \alias{standardError}
-\title{Title}
+\title{Standard Errors}
 \usage{
 standardError(y, SEtype, B)
 }
 \arguments{
-\item{B}{}
+\item{y}{a vector of positive values}
+
+\item{SEtype}{The method used to calculate the standard error (either basic or bootstrap).}
+
+\item{B}{number of samples used to estimate bootstrap standard errors.}
 }
 \value{
-
+standard error
 }
 \description{
-Title
+Calculates the standard error for a Poisson Model using basic or bootstrap standard errors.
+}
+\examples{
+y <- (1:10)
+basic <- standardError(y = y, SEtype = basic, B = 0)
+bootstrap <- standardError(y = y, SEtype = bootstrap, B = 10)
+
 }

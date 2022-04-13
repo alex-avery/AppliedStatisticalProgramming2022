@@ -2,16 +2,18 @@
 % Please edit documentation in R/logLik.R
 \name{logLik}
 \alias{logLik}
-\title{Title}
+\title{Log Likelihood}
 \usage{
 logLik(y, lambda)
 }
 \arguments{
-\item{lambda}{}
+\item{y}{a vector of positive values}
+
+\item{lambda}{value for the expected lambda}
 }
 \value{
-
+log likelihood value
 }
 \description{
-Title
+Calculating the Log Likelihood for a Poisson Model
 }

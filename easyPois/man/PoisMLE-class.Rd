@@ -3,24 +3,24 @@
 \docType{class}
 \name{PoisMLE-class}
 \alias{PoisMLE-class}
-\title{Title}
+\title{Poisson MLE Class}
 \value{
 
 }
 \description{
-Title
+An S4 class for a Possion Model
 }
 \section{Slots}{
 
 \describe{
-\item{\code{y}}{numeric.}
+\item{\code{y}}{a vector of positive values}
 
-\item{\code{MLE}}{numeric.}
+\item{\code{MLE}}{The maximum likelihood estimator for the y vector.}
 
-\item{\code{LL}}{numeric.}
+\item{\code{LL}}{The log likelihood calculated from the y vector.}
 
-\item{\code{SE}}{numeric.}
+\item{\code{SE}}{The standard error for the MLE}
 
-\item{\code{SEtype}}{character.}
+\item{\code{SEtype}}{The method used to calculate the standard error (either basic or bootstrap).}
 }}
 
