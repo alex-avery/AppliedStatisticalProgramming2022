@@ -20,10 +20,10 @@ setClass(
     SEtype = "character"
   ),
   prototype = prototype(
-    y = NA,
-    MLE = NA,
-    LL = NA,
-    SE = NA,
+    y = NA_real_,
+    MLE = NA_real_,
+    LL = NA_real_,
+    SE = NA_real_,
     SEtype = "basic"
 
   )
