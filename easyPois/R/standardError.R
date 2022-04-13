@@ -1,13 +1,19 @@
-#' Title
+#' Standard Errors
 #'
-#' @param y
-#' @param SEtype
-#' @param B
+#' Calculates the standard error for a Poisson Model using basic or bootstrap standard errors.
 #'
-#' @return
-#' @export
+#' @param y a vector of positive values
+#' @param SEtype The method used to calculate the standard error (either basic or bootstrap).
+#' @param B number of samples used to estimate bootstrap standard errors.
+#'
+#' @return standard error
 #'
 #' @examples
+#' y <- (1:10)
+#' basic <- standardError(y = y, SEtype = basic, B = 0)
+#' bootstrap <- standardError(y = y, SEtype = bootstrap, B = 10)
+#'
+#' @export
 standardError <- function(y, SEtype, B){
   #get n
   n <- length(y)
