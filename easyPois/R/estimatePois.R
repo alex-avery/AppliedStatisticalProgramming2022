@@ -29,7 +29,7 @@ setMethod(
     return(new("PoisMLE",
                 y = y,
                 MLE = mle(y),
-                LL = logLik(y, MLE),
+                LL = logLik(y, mle(y)),
                 SE = standardError(y, SEtype, B),
                 SEtype = SEtype
                 )
