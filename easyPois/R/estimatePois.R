@@ -1,13 +1,21 @@
-#' Title
+#' Estimate Poisson Model
 #'
-#' @param y
-#' @param SEtype
-#' @param B
+#' Calculates the log likelihood, maxiumum likelihood estimator, and standard error for a Poisson Model.
 #'
-#' @return
-#' @export
+#' @param y a vector of positive values
+#' @param SEtype The method used to calculate the standard error (either basic or bootstrap).
+#' @param B number of samples used to estimate bootstrap standard errors.
+#'
+#' @return PoisMLE class
+#'
+#' @seealso PoisMLEClass
 #'
 #' @examples
+#' y <- c(1:10)
+#' example1 <- estimatePois(y = y, SEtype = basic, B = 0)
+#' example2 <- estimatePois(y = y, SEtype = bootstrap, B = 10)
+#'
+#' @export
 setGeneric(
   name = "estimatePois",
   def = function(y, SEtype, B){
