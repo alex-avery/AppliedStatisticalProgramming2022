@@ -1,7 +1,9 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-NumericMatrix z_hat(NumericMatrix x, NumericVector y, ){
+// [[Rcpp::export]]
+
+NumericMatrix z_hat(NumericMatrix x, NumericVector y, double sd){
 
   // create matrix
   NumericMatrix dnorm_matrix(x.nrow(), x.ncol());

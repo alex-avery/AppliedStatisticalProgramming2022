@@ -1,6 +1,8 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+// [[Rcpp::export]]
+
 NumericVector w_hat(NumericMatrix z_hat){
   // specify row and column values
   int rows = z_hat.nrow();
