@@ -1,11 +1,11 @@
 Package: ebma
 Type: Package
-Title: What the Package Does in One 'Title Case' Line
+Title: Ensemble Bayesian Model Averaging (EBMA)
 Version: 1.0
-Date: 2022-05-10
-Author: Your Name
-Maintainer: Your Name <your@email.com>
-Description: One paragraph description of what the package does as one or more full sentences.
+Date: 2022-04-28
+Author: Alex Avery
+Maintainer: Alex Avery <a.d.avery@wustl.edu>
+Description: Calculates EBMA using rcpp code. I credit Peter Bachman for helping me out with most of the rcpp code. 
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.8)
 LinkingTo: Rcpp
