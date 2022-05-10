@@ -26,13 +26,13 @@ BEGIN_RCPP
 END_RCPP
 }
 // w_hat
-NumericVector w_hat(NumericMatrix z_hat);
-RcppExport SEXP _ebma_w_hat(SEXP z_hatSEXP) {
+NumericVector w_hat(NumericMatrix z);
+RcppExport SEXP _ebma_w_hat(SEXP zSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type z_hat(z_hatSEXP);
-    rcpp_result_gen = Rcpp::wrap(w_hat(z_hat));
+    Rcpp::traits::input_parameter< NumericMatrix >::type z(zSEXP);
+    rcpp_result_gen = Rcpp::wrap(w_hat(z));
     return rcpp_result_gen;
 END_RCPP
 }

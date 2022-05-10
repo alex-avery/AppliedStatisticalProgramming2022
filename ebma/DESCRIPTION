@@ -5,7 +5,7 @@ Version: 1.0
 Date: 2022-04-28
 Author: Alex Avery
 Maintainer: Alex Avery <a.d.avery@wustl.edu>
-Description: Calculates EBMA using rcpp code. I credit Peter Bachman for helping me out with most of the rcpp code. 
+Description: Calculates EBMA using rcpp code. I am taking most of the Rcpp code from our in-class assignment on Rcpp. 
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.8)
 LinkingTo: Rcpp
