@@ -1,4 +1,6 @@
 #include <Rcpp.h>
+#include "z_hat.cpp"
+#include "w_hat.cpp"
 using namespace Rcpp;
 
 // [[Rcpp::export]]
