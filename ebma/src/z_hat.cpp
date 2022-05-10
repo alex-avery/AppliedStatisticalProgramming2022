@@ -3,7 +3,7 @@ using namespace Rcpp;
 
 // [[Rcpp::export]]
 
-NumericMatrix z_hat(NumericMatrix x, NumericVector y, double sd){
+NumericMatrix z_hat(NumericMatrix x, NumericVector y, NumericVector weights, double sd){
 
   // create matrix
   NumericMatrix dnorm_matrix(x.nrow(), x.ncol());
