@@ -9,7 +9,7 @@ w_hat <- function(z_hat) {
     .Call(`_ebma_w_hat`, z_hat)
 }
 
-z_hat <- function(x, y, sd) {
-    .Call(`_ebma_z_hat`, x, y, sd)
+z_hat <- function(x, y, weights, sd) {
+    .Call(`_ebma_z_hat`, x, y, weights, sd)
 }
 

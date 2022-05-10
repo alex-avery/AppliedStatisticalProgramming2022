@@ -37,15 +37,16 @@ BEGIN_RCPP
 END_RCPP
 }
 // z_hat
-NumericMatrix z_hat(NumericMatrix x, NumericVector y, double sd);
-RcppExport SEXP _ebma_z_hat(SEXP xSEXP, SEXP ySEXP, SEXP sdSEXP) {
+NumericMatrix z_hat(NumericMatrix x, NumericVector y, NumericVector weights, double sd);
+RcppExport SEXP _ebma_z_hat(SEXP xSEXP, SEXP ySEXP, SEXP weightsSEXP, SEXP sdSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type x(xSEXP);
     Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type weights(weightsSEXP);
     Rcpp::traits::input_parameter< double >::type sd(sdSEXP);
-    rcpp_result_gen = Rcpp::wrap(z_hat(x, y, sd));
+    rcpp_result_gen = Rcpp::wrap(z_hat(x, y, weights, sd));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -53,7 +54,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_ebma_ebma", (DL_FUNC) &_ebma_ebma, 5},
     {"_ebma_w_hat", (DL_FUNC) &_ebma_w_hat, 1},
-    {"_ebma_z_hat", (DL_FUNC) &_ebma_z_hat, 3},
+    {"_ebma_z_hat", (DL_FUNC) &_ebma_z_hat, 4},
     {NULL, NULL, 0}
 };
 

@@ -14,7 +14,7 @@ NumericVector ebma(NumericMatrix x, NumericVector y, NumericVector weights, doub
 
   // get z hat values and updated weights
   while(threshold == FALSE){
-    NumericMatrix z_hats = z_hat(x, y, sd);
+    NumericMatrix z_hats = z_hat(x, y, weights, sd);
     NumericVector update_weights = w_hat(z_hats);
     // create test to see if the difference be
     LogicalVector diff = (abs((weights - update_weights)) < tolerance);
