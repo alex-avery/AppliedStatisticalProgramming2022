@@ -3,20 +3,18 @@
 \alias{ebma}
 \docType{package}
 \title{
-  A short title line describing what the package does
+  Ensemble Bayesian Model Averaging (EBMA)
 }
 \description{
-  A more detailed description of what the package does. A length
-  of about one to five lines is recommended.
+  I honestly don't understand a lot of this package so couldn't tell ya unfortunately 
 }
 \details{
-  This section should provide a more detailed overview of how to use the
-  package, including the most important functions.
+  EBMA package with functions to calculate the z hat values, weights, and the overall EBMA vector. 
 }
 \author{
-Your Name, email optional.
+Alex Avery
 
-Maintainer: Your Name <your@email.com>
+Maintainer: Alex Avery <a.d.avery@wustl.edu>
 }
 \references{
   This optional section can contain literature or other references for
