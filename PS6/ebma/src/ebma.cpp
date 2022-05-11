@@ -3,6 +3,16 @@
 #include "w_hat.h"
 using namespace Rcpp;
 
+//' Function to perform EBMA using Rcpp
+//'
+//' @param x Numeric Matrix of x values
+//' @param y Numeric Vector of actual values
+//' @param weights Numeric Vector of weights for each model
+//' @param sd Standard Deviation
+//' @param tolerance Specified tolerance level 
+//'
+//' @export
+
 // [[Rcpp::export]]
 
 NumericVector ebma(NumericMatrix x, NumericVector y, NumericVector weights, double sd, double tolerance){

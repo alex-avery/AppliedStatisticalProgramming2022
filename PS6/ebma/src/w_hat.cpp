@@ -1,6 +1,13 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+//' Get weighted values using Rcpp
+//'
+//' @param z Numeric Matrix of z values
+
+//'
+//' @export
+
 // [[Rcpp::export]]
 
 NumericVector w_hat(NumericMatrix z){

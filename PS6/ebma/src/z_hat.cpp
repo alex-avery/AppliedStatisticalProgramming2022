@@ -1,6 +1,15 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+//' Get z hat values using Rcpp
+//'
+//' @param x Numeric Matrix of x values
+//' @param y Numeric Vector of actual values
+//' @param weights Numeric Vector of weights for each model
+//' @param sd Standard Deviation
+//'
+//' @export
+
 // [[Rcpp::export]]
 
 NumericMatrix z_hat(NumericMatrix x, NumericVector y, NumericVector weights, double sd){
